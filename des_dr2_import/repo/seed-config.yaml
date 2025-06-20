@@ -1,0 +1,4 @@
+datastore:
+  root: <butlerRoot>
+registry:
+  db: postgresql+psycopg2://localhost:5432/decamImport

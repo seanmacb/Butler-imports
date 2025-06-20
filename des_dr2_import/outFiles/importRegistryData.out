@@ -1,0 +1,19 @@
+./yaml_file/yamlOut.yaml
+Traceback (most recent call last):
+  File "/home/s/seanmacb/Rubin Observatory/des_dr2_import/./import_registry_data.py", line 17, in <module>
+    butler.import_(directory=dest_repo_path,
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/direct_butler/_direct_butler.py", line 1782, in import_
+    doImport(stream)
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/direct_butler/_direct_butler.py", line 1770, in doImport
+    backend.load(
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/transfers/_yaml.py", line 702, in load
+    datastore.ingest(*fileDatasets, transfer=transfer, record_validation_info=record_validation_info)
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/datastore/_datastore.py", line 853, in ingest
+    prepData = self._prepIngest(*datasets, transfer=transfer)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/datastores/fileDatastore.py", line 1192, in _prepIngest
+    dataset.path = self._standardizeIngestPath(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lsst/software/stack/conda/envs/lsst-scipipe-10.0.0/share/eups/Linux64/daf_butler/g7096c7a84b+2e8246025c/python/lsst/daf/butler/datastores/fileDatastore.py", line 994, in _standardizeIngestPath
+    raise RuntimeError(
+RuntimeError: Transfer is none but source file (file:///sdf/group/rubin/datasets/refcats/htm/v1/atlas_refcat2_20220201/131072.fits) is not within datastore (file:///sdf/data/rubin/repo/main/)
