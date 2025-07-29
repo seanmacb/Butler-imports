@@ -33,12 +33,8 @@ cat "$PATH_LIST" | xargs -n1 -P"$NUM_PARALLEL" -I{} bash -c '
     out_dir=$(dirname "$out_path")
     mkdir -p "$out_dir"
 
-    if [ -f "$out_path" ]; then
-        echo "  ⏩ Skipping existing: $rel_path"
-    else
-        echo "  ↓ Downloading: $rel_path"
-        rsync -avz -e "ssh -J $jump" "$user@$host:$full_path" "$out_path" || echo "  ⚠️ Failed: $rel_path"
-    fi
+    echo "  ↓ Downloading (overwrite if needed): $rel_path"
+    rsync -avz --inplace -e "ssh -J $jump" "$user@$host:$full_path" "$out_path" || echo "  ⚠️ Failed: $rel_path"
 ' _ {}
 
 echo "✅ All rsync transfers complete."

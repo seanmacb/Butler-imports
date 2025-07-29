@@ -3,7 +3,7 @@
 # === CONFIGURATION ===
 URL_LIST="split00.txt"  # Text file with list of FITS or FITS.FZ URLs
 BASE_URL="https://desdr-server.ncsa.illinois.edu/despublic/dr2_tiles/"  # Common URL prefix to strip
-OUTPUT_DIR="/sdf/data/rubin/repo/main/DECam/communityProcessed/DES_DR2"  # Where to save files
+OUTPUT_DIR="/sdf/data/rubin/repo/main/DECam/communityProcessed/dr2_tiles"  # Where to save files
 NUM_PARALLEL=128  # Number of simultaneous downloads
 
 # === VALIDATION ===

@@ -1,7 +1,7 @@
 #!/bin/bash
 module load rclone
 # === CONFIGURATION ===
-URL_LIST="split07.txt"  # List of direct URLs to FITS or FITS.FZ files
+URL_LIST="fits_urls.txt"  # List of direct URLs to FITS or FITS.FZ files
 BASE_URL="https://desdr-server.ncsa.illinois.edu/despublic/dr2_tiles/"  # Prefix to strip
 OUTPUT_DIR="/sdf/data/rubin/repo/main/DECam/communityProcessed/dr2_tiles"  # Destination
 NUM_PARALLEL=64  # Number of parallel jobs
