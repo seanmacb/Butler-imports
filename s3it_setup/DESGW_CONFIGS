@@ -1,0 +1,2 @@
+REPO=/shares/soares-santos.physik.uzh/ButlerProjects/DESGW
+LOGDIR=$REPO/logs

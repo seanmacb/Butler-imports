@@ -2,7 +2,7 @@
 #SBATCH --nodes=1 
 #SBATCH --ntasks=1 
 #SBATCH --cpus-per-task=1 
-#SBATCH --mem=16GB 
+#SBATCH --mem=64GB 
 #SBATCH --time=12:00:00 
 #SBATCH -o /scratch/smacbr/ButlerSetup/out/link_science.out
 #SBATCH -e /scratch/smacbr/ButlerSetup/err/link_science.err 
